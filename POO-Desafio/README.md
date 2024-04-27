@@ -1,29 +1,97 @@
-Contador
-Description
-This Java program takes two integer parameters from the user via the terminal and prints numbers incrementally between them. It includes error handling for cases where the second parameter is smaller than the first.
+Introdução
+Este desafio tem como objetivo modelar e implementar o comportamento de um iPhone como um reprodutor musical, um aparelho telefônico e um navegador de internet, utilizando a orientação a objetos (POO) e a linguagem de programação Java.
 
-Instructions
-Clone this repository to your local machine.
-Open a terminal and navigate to the directory containing the Contador.java file.
-Compile the program using the following command:
-Copy code
-javac Contador.java
-Run the program using the following command:
-Copy code
-java Contador
-Follow the prompts to enter the two integer parameters.
-The program will print the numbers between the two parameters. If the second parameter is smaller than the first, it will throw a ParametrosInvalidosException with the message "O segundo parâmetro deve ser maior que o primeiro".
-Example
-Copy code
-Digite o primeiro parâmetro
-5
-Digite o segundo parâmetro
-10
-Imprimindo o número 5
-Imprimindo o número 6
-Imprimindo o número 7
-Imprimindo o número 8
-Imprimindo o número 9
-Imprimindo o número 10
-Author
-[Your Name]
+Referências:
+
+Vídeo de lançamento do iPhone (2007): https://www.youtube.com/watch?v=vN4U5FqrOdQ (Minutos relevantes: 00:15 - 00:55)
+Comportamentos esperados:
+Reprodutor Musical:
+Tocar música
+Pausar música
+Selecionar música
+Aparelho Telefônico:
+Ligar para um número
+Atender uma chamada
+Iniciar gravação de correio de voz
+Navegador de Internet:
+Exibir uma página da web
+Adicionar uma nova aba
+Atualizar a página atual
+Diagrama UML
+1. Diagrama de Classes:
+
+Snippet de código
+@startuml
+
+class ReprodutorMusical {
+    - musicaAtual: Musica
+    - listaMusicas: List<Musica>
+
+    + tocar()
+    + pausar()
+    + selecionarMusica(Musica musica)
+}
+
+class AparelhoTelefonico {
+    - numeroDiscado: String
+    - ligacaoEmCurso: boolean
+
+    + ligar(String numero)
+    + atender()
+    + iniciarCorreioVoz()
+}
+
+class NavegadorInternet {
+    - paginaAtual: Pagina
+    - historicoPaginas: List<Pagina>
+
+    + exibirPagina(String url)
+    + adicionarNovaAba()
+    + atualizarPagina()
+}
+
+interface Reprodutor {
+    + tocar()
+    + pausar()
+    + selecionarMusica(Musica musica)
+}
+
+interface DispositivoComunicacao {
+    + ligar(String numero)
+    + atender()
+    + iniciarCorreioVoz()
+}
+
+interface Navegador {
+    + exibirPagina(String url)
+    + adicionarNovaAba()
+    + atualizarPagina()
+}
+
+ReprodutorMusical --implements-- Reprodutor
+AparelhoTelefonico --implements-- DispositivoComunicacao
+NavegadorInternet --implements-- Navegador
+
+@enduml
+Use o código com cuidado.
+content_copy
+2. Diagrama de Sequência (Exemplo - Tocar Música):
+
+Snippet de código
+@startuml
+' Create a player instance
+Alice->>ReprodutorMusical: player = new ReprodutorMusical()
+
+' Select a music
+Alice->>player: player.selecionarMusica("Minha Música")
+
+' Play the music
+Alice->>player: player.tocar()
+
+' Wait for the music to finish
+activate player
+player->>Alice: Music finished
+deactivate player
+
+@enduml
+Use o código com cuidado.
