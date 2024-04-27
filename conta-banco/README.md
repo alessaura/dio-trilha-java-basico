@@ -1,18 +1,51 @@
-## Getting Started
+# ContaBanco
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Este é um projeto simples em Java que permite ao usuário inserir informações sobre uma conta bancária via terminal e exibe uma mensagem personalizada com os dados fornecidos.
 
-## Folder Structure
+## Requisitos
 
-The workspace contains two folders by default, where:
+- Java SDK instalado
+- Um ambiente Java configurado para compilar e executar o código
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Como Usar
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+1. Clone este repositório para o seu ambiente local.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+2. Abra um terminal e navegue até o diretório do projeto.
 
-## Dependency Management
+3. Compile o código Java usando o comando:
+   ```
+   javac ContaTerminal.java
+   ```
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+4. Execute o programa compilado usando o comando:
+   ```
+   java ContaTerminal
+   ```
+
+5. Siga as instruções apresentadas no terminal para inserir as informações da conta bancária.
+
+6. Após inserir todas as informações solicitadas, a mensagem personalizada será exibida no terminal.
+
+## Exemplo
+
+```
+Por favor, digite o número da Agência:
+067-8
+Por favor, digite o número da Conta:
+1021
+Por favor, digite o nome do Cliente:
+MARIO ANDRADE
+Por favor, digite o saldo da Conta:
+237.48
+Olá MARIO ANDRADE, obrigado por criar uma conta em nosso banco,
+sua agência é 067-8, conta 1021 e seu saldo 237.48 já está disponível para saque.
+```
+
+## Contribuindo
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir um pull request ou relatar um problema.
+
+## Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
