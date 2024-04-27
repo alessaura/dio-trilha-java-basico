@@ -1,4 +1,4 @@
-Introdução
+##Introdução##
 Este desafio tem como objetivo modelar e implementar o comportamento de um iPhone como um reprodutor musical, um aparelho telefônico e um navegador de internet, utilizando a orientação a objetos (POO) e a linguagem de programação Java.
 
 Referências:
@@ -73,7 +73,6 @@ AparelhoTelefonico --implements-- DispositivoComunicacao
 NavegadorInternet --implements-- Navegador
 
 @enduml
-Use o código com cuidado.
 content_copy
 2. Diagrama de Sequência (Exemplo - Tocar Música):
 
@@ -93,5 +92,4 @@ activate player
 player->>Alice: Music finished
 deactivate player
 
-@enduml
-Use o código com cuidado.
+
